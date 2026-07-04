@@ -22,6 +22,14 @@
     },
     "api/discord-test.ts": {
       "maxDuration": 30
+    },
+    "api/config-status.ts": {
+      "maxDuration": 15,
+      "memory": 512
+    },
+    "api/health.ts": {
+      "maxDuration": 15,
+      "memory": 512
     }
   }
 }
