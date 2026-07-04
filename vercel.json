@@ -12,22 +12,22 @@
     }
   ],
   "functions": {
-    "api/research.js": {
+    "api/research.ts": {
       "maxDuration": 60,
       "memory": 1024
     },
-    "api/download-pdf.js": {
+    "api/download-pdf.ts": {
       "maxDuration": 30,
       "memory": 1024
     },
-    "api/discord-test.js": {
+    "api/discord-test.ts": {
       "maxDuration": 30
     },
-    "api/config-status.js": {
+    "api/config-status.ts": {
       "maxDuration": 15,
       "memory": 512
     },
-    "api/health.js": {
+    "api/health.ts": {
       "maxDuration": 15,
       "memory": 512
     }
