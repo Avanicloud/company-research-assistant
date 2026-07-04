@@ -239,8 +239,8 @@ company-research-assistant/
 | Field | Value |
 |-------|-------|
 | **Applicant Email** | avanirdj2722@gmail.com |
-| **GitHub Repository** | *(add your public repo URL after push)* |
-| **Deployed URL** | *(add your Vercel URL after deploy)* |
+| **GitHub Repository** | https://github.com/Avanicloud/company-research-assistant |
+| **Deployed URL** | https://company-research-assistant-gray.vercel.app |
 
 ---
 
