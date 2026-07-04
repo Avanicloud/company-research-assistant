@@ -1,0 +1,6 @@
+{
+  "name": "Company Research Assistant",
+  "description": "Research any company by providing either a company name or website URL. The system crawls their website, enriches with Serper.dev, analyzes with OpenRouter, finds competitors, and generates downloadable professional PDF reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
