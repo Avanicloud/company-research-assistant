@@ -1,18 +1,26 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "./dist",
-    "allowJs": true,
-    "jsx": "react-jsx",
+<<<<<<< HEAD
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
     "isolatedModules": true,
     "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./*"
+      ]
+    },
+    "noEmit": true
+=======
+    "outDir": "./dist"
+>>>>>>> bdc17464b7fa7b843aeb203135cc757db94524f2
   }
 }
