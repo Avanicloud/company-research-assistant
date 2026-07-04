@@ -101,7 +101,16 @@ export default function App() {
 
     // Fetch server environment API key status
     fetch('/api/config-status')
-      .then(res => res.json())
+      .then(async (res) => {
+        if (!res.ok) {
+          throw new Error(`Config status request failed (${res.status})`);
+        }
+        const contentType = res.headers.get('content-type') || '';
+        if (!contentType.includes('application/json')) {
+          throw new Error('Config status returned a non-JSON response');
+        }
+        return res.json();
+      })
       .then(data => {
         if (data) {
           setServerHasSerper(!!data.hasSerperKey);
