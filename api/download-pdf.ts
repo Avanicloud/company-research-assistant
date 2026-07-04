@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { generateCompanyReportPdf } from '../server/pdf';
-import type { CompanyResearchResult } from '../src/types';
+import { generateCompanyReportPdf } from '../server/pdf.js';
+import type { CompanyResearchResult } from '../src/types.js';
 
 export const config = {
   maxDuration: 30,

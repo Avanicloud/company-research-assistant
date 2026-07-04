@@ -1,8 +1,8 @@
-import { CompanyResearchResult, ApiConfig, DiscordConfig, Competitor } from '../src/types';
-import { resolveOfficialWebsite, searchSerper } from './search';
-import { crawlCompanyWebsite, normalizeUrl } from './crawler';
-import { generateCompanyReportPdf } from './pdf';
-import { sendReportToDiscord } from './discord';
+import { CompanyResearchResult, ApiConfig, DiscordConfig, Competitor } from '../src/types.js';
+import { resolveOfficialWebsite, searchSerper } from './search.js';
+import { crawlCompanyWebsite, normalizeUrl } from './crawler.js';
+import { generateCompanyReportPdf } from './pdf.js';
+import { sendReportToDiscord } from './discord.js';
 
 /**
  * Intelligent detector: check if input is a website URL or a company name
@@ -52,6 +52,7 @@ async function callOpenRouter(prompt: string, apiKey: string, model: string): Pr
           },
         ],
         temperature: 0.1,
+        max_tokens: 4096,
       }),
       signal: controller.signal,
     });
@@ -60,6 +61,11 @@ async function callOpenRouter(prompt: string, apiKey: string, model: string): Pr
 
     if (!response.ok) {
       const errText = await response.text();
+      if (response.status === 402) {
+        throw new Error(
+          'OpenRouter credit limit reached. Add credits at openrouter.ai/settings/credits, or use a key with sufficient balance.'
+        );
+      }
       throw new Error(`OpenRouter API error: ${response.status} - ${errText}`);
     }
 

@@ -1,10 +1,10 @@
 import 'dotenv/config';
 import express from 'express';
 import path from 'path';
-import { performCompanyResearch } from './server/research';
-import { generateCompanyReportPdf } from './server/pdf';
-import { sendReportToDiscord } from './server/discord';
-import type { CompanyResearchResult, ResearchRequest, DiscordConfig } from './src/types';
+import { performCompanyResearch } from './server/research.js';
+import { generateCompanyReportPdf } from './server/pdf.js';
+import { sendReportToDiscord } from './server/discord.js';
+import type { CompanyResearchResult, ResearchRequest, DiscordConfig } from './src/types.js';
 
 async function startServer() {
   const app = express();

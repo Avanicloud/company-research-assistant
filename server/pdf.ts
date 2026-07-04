@@ -1,5 +1,5 @@
 import PDFDocument from 'pdfkit';
-import { CompanyResearchResult } from '../src/types';
+import { CompanyResearchResult } from '../src/types.js';
 
 /**
  * Generate a highly polished, professional PDF report of the researched company.

@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { generateCompanyReportPdf } from '../server/pdf';
-import { sendReportToDiscord } from '../server/discord';
-import type { CompanyResearchResult, DiscordConfig } from '../src/types';
+import { generateCompanyReportPdf } from '../server/pdf.js';
+import { sendReportToDiscord } from '../server/discord.js';
+import type { CompanyResearchResult, DiscordConfig } from '../src/types.js';
 
 export const config = {
   maxDuration: 30,

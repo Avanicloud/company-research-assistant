@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { performCompanyResearch } from '../server/research';
-import type { ResearchRequest } from '../src/types';
+import { performCompanyResearch } from '../server/research.js';
+import type { ResearchRequest } from '../src/types.js';
 
 export const config = {
   maxDuration: 60,
